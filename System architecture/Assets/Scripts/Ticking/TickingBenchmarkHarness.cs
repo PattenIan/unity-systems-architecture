@@ -24,6 +24,7 @@ public class TickingBenchmarkHarness : MonoBehaviour
 
     private void Start()
     {
+        //Moved from Awake to make sure UpdateOrchestra is instantiated
         if (UpdateOrchestra.Instance != null)
         {
             UpdateOrchestra.Instance.Initialize(spawnCount);
